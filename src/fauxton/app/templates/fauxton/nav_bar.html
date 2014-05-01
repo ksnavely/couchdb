@@ -25,7 +25,7 @@ the License.
   <ul id="nav-links" class="nav pull-right">
     <% _.each(navLinks, function(link) { %>
     <% if (link.view) {return;}  %>
-        <li data-nav-name= "<%= link.title %>" ><a class="<%= link.icon %> fonticon" href="<%= link.href %>"><%= link.title %></a></li>
+        <li data-nav-name= "<%- link.title %>" ><a class="<%- link.icon %> fonticon" href="<%- link.href %>"><%- link.title %></a></li>
     <% }); %>
   </ul>
 
@@ -41,9 +41,9 @@ the License.
 
       <% _.each(bottomNavLinks, function(link) { %>
       <% if (link.view) {return;}  %>
-        <li data-nav-name= "<%= link.title %>">
-            <a class="<%= link.icon %> fonticon" href="<%= link.href %>">
-                <%= link.title %>
+        <li data-nav-name= "<%- link.title %>">
+            <a class="<%- link.icon %> fonticon" href="<%- link.href %>">
+                <%- link.title %>
             </a>
         </li>
       <% }); %>
@@ -52,9 +52,9 @@ the License.
     <ul id="footer-nav-links" class="nav">
       <% _.each(footerNavLinks, function(link) { %>
       <% if (link.view) {return;}  %>
-        <li data-nav-name= "<%= link.title %>">
-            <a class="<%= link.icon %> fonticon" href="<%= link.href %>">
-                <%= link.title %>
+        <li data-nav-name= "<%- link.title %>">
+            <a class="<%- link.icon %> fonticon" href="<%- link.href %>">
+                <%- link.title %>
             </a>
         </li>
       <% }); %>
